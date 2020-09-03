@@ -19,6 +19,6 @@ jobs:
         dst: gitee/labplus-cn
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
-        account_type: user
+        account_type: org
         static_list: 'mpython'
         force_update: true
