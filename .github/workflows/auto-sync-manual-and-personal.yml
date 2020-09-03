@@ -5,7 +5,7 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # UTC 20:00 -> CST (China) 4:00, see https://datetime360.com/cn/utc-cst-china-time/
-    - cron: '0 20 * * *'
+    - cron: '30 12 * * *'
 name: Mirror GitHub Selected Repos to Gitee
 jobs:
   run:
@@ -15,10 +15,10 @@ jobs:
     - name: Mirror the sigminer repos to Gitee.
       uses: Yikun/hub-mirror-action@master
       with:
-        src: github/ShixiangWang
-        dst: gitee/ShixiangWang
+        src: github/labplus-cn  
+        dst: gitee/labplus-cn
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
         account_type: user
-        static_list: 'home,geek-r-tutorial,GoArduino,MLnotes,PPaction,RShining,Pythonshining,sigminer-doc,sigminer,sigminer.workflow,sigminer.prediction,CNVMotif,tinyscholar,loon,DoAbsolute,ezcox,metawho,sync-deploy'
+        static_list: 'mpython'
         force_update: true
